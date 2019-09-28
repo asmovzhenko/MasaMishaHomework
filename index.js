@@ -5,19 +5,10 @@ let submit = document.getElementById('submit');
 let list = document.getElementById('list');
 
 function GoodColor(color) {
-    var color2 = "";
-    var result = true;
-    var e = document.getElementById('mydiv');
-    e.style.borderColor = "";
-    e.style.borderColor = color;
-    color2 = e.style.borderColor;
-    if (color2.length == 0) {
-        result = false;
-    }
-    e.style.borderColor = "";
-    return result;
+    let node = document.createElement("div");
+    node.style.color = color;
+    return node.style.color !== "";
 }
-
 
 function submitText() {
     let value = input.value;
